@@ -3,11 +3,10 @@ import Post from "./Post";
 import Modal from "@material-ui/core/Modal";
 import "./App.css";
 import { db, auth } from "./firebase";
-//import { db, auth, storage } from "./firebase";
 import { makeStyles, Button, Input } from "@material-ui/core";
 import ImageUpload from "./ImageUpload";
+import Profile from "./Profile";
 import "./ImageUpload.css";
-import InstagramEmbed from "react-instagram-embed";
 
 function getModalStyle() {
   const top = 50;
@@ -38,6 +37,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const [openSignIn, setOpenSignIn] = useState(false);
   const [openUpload, setOpenUpload] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -171,6 +171,14 @@ function App() {
 
       </Modal>
 
+      {/* <Modal open={openProfile} onClose={() => setOpenProfile(false)}>
+        <div>
+          <center>
+          {user?.displayName ? (<Profile username={user.displayName}/>) : (<h3>Sorry you need to be logged in</h3>)}
+          </center>
+        </div>
+      </Modal> */}
+
 
 
       <div className="app__header">
@@ -183,6 +191,7 @@ function App() {
         {user ? (
           <div className="app__logoutContainer">
             <Button onClick={() => setOpenUpload(true)}>Upload Image</Button>
+            {/* <Button onClick={() => setOpenProfile(true)}>Profile</Button> */}
             <Button onClick={() => auth.signOut()}>Logout</Button>
           </div>
         ) : (

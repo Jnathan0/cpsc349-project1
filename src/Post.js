@@ -49,13 +49,14 @@ function Post({ postId, username, caption, imageUrl, user }) {
     db.collection("posts").doc(postId).delete();
   };
 
+
   return (
     <div className="post">
       <div className="post__header">
         <div className="post__headerUser">
           <Avatar
             className="post__avatar"
-            alt="RafehQazi"
+            alt={username.charAt(0)}
             src="/static/images/avatar/1.jpg"
           />
           <h3>{username}</h3>
