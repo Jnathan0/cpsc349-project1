@@ -79,6 +79,7 @@ function App() {
       .then((authUser) => {
         return authUser.user.updateProfile({
           displayName: username,
+          email: email
         });
       })
       .catch((error) => alert(error.message));
@@ -171,13 +172,13 @@ function App() {
 
       </Modal>
 
-      {/* <Modal open={openProfile} onClose={() => setOpenProfile(false)}>
+      <Modal open={openProfile} onClose={() => setOpenProfile(false)}>
         <div>
           <center>
-          {user?.displayName ? (<Profile username={user.displayName}/>) : (<h3>Sorry you need to be logged in</h3>)}
+          {user?.displayName ? (<Profile user={user}/>) : (<h3>Sorry you need to be logged in</h3>)}
           </center>
         </div>
-      </Modal> */}
+      </Modal>
 
 
 
@@ -191,7 +192,7 @@ function App() {
         {user ? (
           <div className="app__logoutContainer">
             <Button onClick={() => setOpenUpload(true)}>Upload Image</Button>
-            {/* <Button onClick={() => setOpenProfile(true)}>Profile</Button> */}
+            <Button onClick={() => setOpenProfile(true)}>Profile</Button>
             <Button onClick={() => auth.signOut()}>Logout</Button>
           </div>
         ) : (
@@ -215,12 +216,6 @@ function App() {
           ))}
         </div>
       </div>
-
-      {/* {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
-      ) : (
-        <h3>Sorry you need to login to upload</h3>
-      )} */}
     </div>
   );
 }
