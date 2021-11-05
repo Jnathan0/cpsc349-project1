@@ -79,7 +79,7 @@ function ImageUpload({ username }) {
     <div style={modalStyle} className={classes.paper}>
     <div className="imageupload">
       <div class="file-upload-wrapper" data-text={ image ? image.name : "Select an image!" }>
-        <input name="file-upload-field" type="file" class="file-upload-field" value="" onChange={handleChange} />
+        <input name="file-upload-field" type="file" className="file-upload-field" value="" onChange={handleChange} />
       </div>
       <textarea
         rows="5"
