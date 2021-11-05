@@ -1,6 +1,5 @@
 # BlackMail Blog made with React
 
-[hostedSite](https://instagram-clone-3b95e.web.app/)
 
 Team Members: 
 Lauren Martinez 
