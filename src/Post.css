@@ -1,0 +1,95 @@
+.post {
+  background-color: #fff;
+  max-width: 500px;
+  border: 1px solid lightgray;
+  margin-bottom: 45px;
+}
+
+.post__image {
+  width: 100%;
+  object-fit: contain;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.post__text {
+  font-weight: normal;
+  padding: 20px;
+}
+
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.post__headerUser {
+  display: flex;
+  align-items: center;
+}
+
+.post__avatar {
+  margin-right: 10px;
+}
+
+.post__commentBox {
+  display: flex;
+  margin-top: 10px;
+}
+.post__comments {
+  padding: 20px;
+}
+.post__input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  border-top: 1px solid lightgray;
+}
+.post__button {
+  flex: 0;
+  border: none;
+  color:white;
+  background-color: #007fff;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 5px;
+  border-top: 1px solid lightgray;
+}
+
+.post__comment {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr;
+  margin-bottom: 3px;
+}
+
+.post__deleteComment {
+  font-size: 12px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  border-radius: 1px;
+  cursor: pointer;
+  margin-right: 5px;
+  color: black;
+  background-color: #fff;
+}
+
+.post__deleteComment:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.25s linear;
+}
+
+.post__deletePost {
+  font-size: 20px;
+  padding: 5px 5px;
+  cursor: pointer;
+  color: black;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+.post__deletePost:hover {
+  background-color: red;
+  color: white;
+  transition: background-color 0.25s linear;
+}
